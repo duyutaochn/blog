@@ -1,0 +1,33 @@
+@import '../_base/variables';
+@import 'post';
+@import 'content';
+@import 'pager';
+
+#main {
+    max-width: 40rem;
+    margin: auto;
+    padding: 0 0;
+    .type-title {
+        padding: .5rem;
+        color: #555;
+        background: rgba(255, 255, 255, 0.8);
+    }
+}
+
+@media only screen and (min-width:40rem) {
+    #main {
+        max-width: 60rem;
+        padding: 0 1rem;
+        .type-title {
+            background: none;
+        }
+    }
+}
+
+@media only screen and (min-width:60rem) {
+    #main {
+        float: left;
+        width: 40rem;
+        padding: 0 2rem;
+    }
+}

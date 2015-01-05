@@ -1,0 +1,12 @@
+extends base.jade
+block content
+    != partial("_partials/nav.jade", {page: page})
+    - page.posts.each(function(chapter) {
+    article.article.clear
+        header.header
+          h1= chapter.title
+        !=chapter.content
+    - })
+    != partial("_partials/nav.jade", {page: page})
+    if !page.prev || !page.next
+        != partial("_partials/author.jade")

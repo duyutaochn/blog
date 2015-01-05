@@ -1,0 +1,26 @@
+article.post
+    div.content.desc.typo
+        h1.blog-title
+            =page.title
+        include ../_widget/toc
+        != page.content
+        if page.tags.length > 0
+            hr
+            div.tags
+                - page.tags.each(function(tag){
+                    a.blog-tag(href=config.root + tag.path)
+                        =tag.name
+                - })
+        if theme.jiathis.enable
+            hr
+            div.jia
+                include ../_widget/jiathis
+
+        if theme.duoshuo.enable
+            hr
+            include ../_widget/duoshuo
+        if theme.disqus.enable
+            hr
+            include ../_widget/disqus
+
+            

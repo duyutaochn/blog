@@ -1,0 +1,8 @@
+extends base
+
+prepend window_title
+    = page.title
+
+block content
+    include _partial/detail
+    include _partial/article_pagination

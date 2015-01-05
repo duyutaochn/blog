@@ -1,0 +1,104 @@
+@import '../_base/variables';
+
+#aside {
+    padding-top: 5%;
+    background: #222 @dark_back;
+    color: #fff;
+    font-weight: bold;
+    text-align: left;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+    section {
+        padding: 1rem;
+        &:after {
+            content: "";
+            position: relative;
+            display: block;
+            margin: 2rem auto 0;
+            border-bottom: 3px solid #fff;
+            height: 0;
+            width: 50%;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+            color: @theme_color;
+        }
+    }
+    .title {
+        color: #fff;
+        line-height: 2rem;
+        margin-bottom: 1rem;
+        white-space: nowrap;
+        i {
+            margin-left: .5rem;
+        }
+    }
+    li {
+        line-height: 1.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        span {
+            &:before {
+                content: ' ('
+            }
+            &:after {
+                content: ') '
+            }
+
+        }
+    }
+    .tag-list-item {
+        display: inline-block;
+        width: 45%;
+        margin-bottom: .3rem;
+    }
+}
+@media only screen and (min-width:40rem) {
+    #aside {
+        &:after {
+            content: "";
+            display: block;
+            height: 1px;
+            clear: both;
+            visibility: hidden;
+        }
+        section {
+            padding: 1rem;
+        }
+    }
+}
+@media only screen and (min-width:60rem) {
+    #aside {
+        overflow: hidden;
+        border-bottom: none;
+        padding-top: 0;
+        section {
+            width: 100%;
+            float: none;
+            border: none;
+            &:after {
+                display: none;
+            }
+        }
+    }
+}
+@media only screen and (min-width:60rem) {
+    #aside {
+        background: none;
+        color: #555;
+        box-shadow: none;
+        a {
+            text-decoration: none;
+            color: #555;
+        }
+        .title {
+            color: #555;
+            padding: .5rem 0;
+            border-bottom: 1px dotted #555;
+        }
+    }
+}

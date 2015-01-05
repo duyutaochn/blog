@@ -1,0 +1,10 @@
+extends base
+
+prepend window_title
+    = __('home')
+
+block content
+    - page.posts.each(function(post){
+        include _partial/article_meta
+    - })
+    include _partial/pagination
